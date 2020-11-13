@@ -1,0 +1,43 @@
+$style: 'block';
+.#{$style}{
+    @include flex(center, center, column);
+    background: url(../img/bgr.png) no-repeat;
+    &__header{
+        @include flex(center, center);
+        background-color: $header-bgr;
+        width: 100%;
+        
+    }
+    &__item{
+        @include flex(center, center, column);
+        @include transition(fill, color, border);
+        cursor: pointer;
+        padding: 33px 0;
+        margin-right: 72px;
+        border: 2px solid $header-bgr;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            border-bottom: 2px solid $activ-color;
+        }
+        &:hover span{
+            color: $activ-color;
+        }
+        &:hover svg{
+            fill: $activ-color;
+        }
+    }
+    &__title{
+        @include text($H60, normal, $disactiv-color){
+            line-height: 1.75;
+        }
+    }
+    &__head-svg{
+        margin-bottom: 15px;
+        fill: $disactiv-color;
+        @include transition(fill);
+        
+    }
+
+}

@@ -14,5 +14,8 @@
   "parcelCleanPaths": [
     "dist",
     ".cash"
-  ]
+  ],
+  "dependencies": {
+    "uikit": "^3.5.9"
+  }
 }
